@@ -1,31 +1,31 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   mode: "development",
-
   entry: "./js/main.js",
-
   output: {
     filename: "bundle.js",
     path: path.resolve(__dirname, "dist"),
     clean: true,
   },
-
   module: {
     rules: [
-      // SCSS
       {
         test: /\.scss$/,
-        use: ["style-loader", "css-loader", "sass-loader"],
+        use: [
+          MiniCssExtractPlugin.loader, // вместо style-loader
+          "css-loader",
+          "sass-loader",
+        ],
       },
-      // Картинки (JS/SCSS)
       {
         test: /\.(png|jpe?g|gif|svg)$/i,
         type: "asset/resource",
         generator: {
-          filename: "img/[hash][ext][query]", // файлы будут лежать в dist/images
+          filename: "img/[hash][ext][query]",
         },
       },
       {
@@ -37,18 +37,18 @@ module.exports = {
       },
     ],
   },
-
   plugins: [
     new HtmlWebpackPlugin({
       template: "./index.html",
+      favicon: "./favicon.ico",
+    }),
+    new MiniCssExtractPlugin({
+      filename: "css/[name].css", // итоговый CSS в dist/css/
     }),
     new CopyPlugin({
-      patterns: [
-        { from: "img", to: "img" }, // копирует картинки из папки images в dist/images
-      ],
+      patterns: [{ from: path.resolve(__dirname, "img"), to: "img" }],
     }),
   ],
-
   devServer: {
     port: "auto",
     open: true,
