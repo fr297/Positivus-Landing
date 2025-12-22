@@ -1,8 +1,22 @@
 {
+  "name": "positivus-landing",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "webpack serve",
+    "build": "webpack"
+  },
   "devDependencies": {
-    "sass": "^1.97.1"
+    "css-loader": "^7.1.2",
+    "html-webpack-plugin": "^5.6.5",
+    "sass": "^1.97.1",
+    "sass-loader": "^16.0.6",
+    "style-loader": "^4.0.0",
+    "webpack": "^5.104.1",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.2"
   },
   "dependencies": {
-    "normalize.scss": "^0.1.0"
+    "normalize.css": "^8.0.1"
   }
 }
