@@ -28,21 +28,31 @@
     list-style-type: none;
     gap: 40px;
     .servicesItem {
+      position: relative;
       width: 48%;
+      padding: 0 0 4px;
       border-radius: 45px;
-      padding: 50px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border: 2px solid #191a23;
       transition: all 0.4s ease;
+      background-color: #191a23;
+      .servicesItemWrapper {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: 2px solid #191a23;
+        border-radius: 45px;
+        padding: 50px;
+      }
       h3 {
         font-size: 30px;
         font-weight: 500;
-        background-color: #b9ff66;
-        border-radius: 7px;
-        padding: 7px;
         margin-bottom: 93px;
+        span {
+          border-radius: 9px;
+          padding: 7px;
+          display: inline-block;
+          margin: 0;
+        }
       }
       a {
         font-size: 20px;
@@ -69,85 +79,109 @@
         height: auto;
       }
       &:nth-child(1) {
-        background-color: #f3f3f3;
-        h3 {
-          background-color: #b9ff66;
-        }
-        a {
-          color: #191a23;
-          span {
-            &::after {
-              background-color: #191a23;
+        .servicesItemWrapper {
+          background-color: #f3f3f3;
+          h3 {
+            span {
+              background-color: #b9ff66;
+            }
+          }
+          a {
+            color: #191a23;
+            .servicesLink {
+              &::after {
+                background-color: #191a23;
+              }
             }
           }
         }
       }
       &:nth-child(2) {
-        background-color: #b9ff66;
-        h3 {
-          background-color: #fff;
-        }
-        a {
-          color: #191a23;
-          span {
-            &::after {
-              background-color: #191a23;
+        .servicesItemWrapper {
+          background-color: #b9ff66;
+          h3 {
+            span {
+              background-color: white;
+            }
+          }
+          a {
+            color: #191a23;
+            .servicesLink {
+              &::after {
+                background-color: #191a23;
+              }
             }
           }
         }
       }
       &:nth-child(3) {
-        background-color: #191a23;
-        h3 {
-          background-color: #fff;
-        }
-        a {
-          color: #fff;
-          span {
-            &::after {
-              background-color: #fff;
+        .servicesItemWrapper {
+          background-color: #191a23;
+          h3 {
+            span {
+              background-color: white;
+            }
+          }
+          a {
+            color: #fff;
+            .servicesLink {
+              &::after {
+                background-color: #fff;
+              }
             }
           }
         }
       }
       &:nth-child(4) {
-        background-color: #f3f3f3;
-        h3 {
-          background-color: #b9ff66;
-        }
-        a {
-          color: #191a23;
-          span {
-            &::after {
-              background-color: #191a23;
+        .servicesItemWrapper {
+          background-color: #f3f3f3;
+          h3 {
+            span {
+              background-color: #b9ff66;
+            }
+          }
+          a {
+            color: #191a23;
+            .servicesLink {
+              &::after {
+                background-color: #191a23;
+              }
             }
           }
         }
       }
       &:nth-child(5) {
-        background-color: #b9ff66;
-        h3 {
-          background-color: #f3f3f3;
-        }
-        a {
-          color: #191a23;
-          span {
-            &::after {
-              background-color: #191a23;
+        .servicesItemWrapper {
+          background-color: #b9ff66;
+          h3 {
+            span {
+              background-color: white;
+            }
+          }
+          a {
+            color: #191a23;
+            .servicesLink {
+              &::after {
+                background-color: #191a23;
+              }
             }
           }
         }
       }
       &:nth-child(6) {
-        background-color: #191a23;
-        h3 {
-          background-color: #b9ff66;
-        }
-        a {
-          color: #fff;
-          span {
-            &::after {
-              background-color: #fff;
+        .servicesItemWrapper {
+          background-color: #191a23;
+          h3 {
+            span {
+              background-color: #b9ff66;
+            }
+          }
+          a {
+            color: #fff;
+            .servicesLink {
+              &::after {
+                background-color: #fff;
+              }
             }
           }
         }
