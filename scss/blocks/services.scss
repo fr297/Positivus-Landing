@@ -1,0 +1,194 @@
+.services {
+  padding: 70px 0 50px 0;
+  .serviceAbout {
+    display: flex;
+    align-items: center;
+    gap: 47px;
+    width: 70%;
+    padding-bottom: 40px;
+    .servicesTitle {
+      font-size: 40px;
+      font-weight: 500;
+      background-color: #b9ff66;
+      border-radius: 7px;
+      padding: 7px;
+    }
+    .servicesSubtitle {
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 28px;
+    }
+  }
+  .servicesList {
+    padding-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    gap: 40px;
+    .servicesItem {
+      position: relative;
+      width: 48%;
+      padding: 0 0 4px;
+      border-radius: 45px;
+      transition: all 0.4s ease;
+      background-color: #191a23;
+      .servicesItemWrapper {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: 2px solid #191a23;
+        border-radius: 45px;
+        padding: 50px;
+      }
+      h3 {
+        font-size: 30px;
+        font-weight: 500;
+        margin-bottom: 93px;
+        span {
+          border-radius: 9px;
+          padding: 7px;
+          display: inline-block;
+          margin: 0;
+        }
+      }
+      a {
+        font-size: 20px;
+        font-weight: 400;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        svg {
+          transition: all 0.4s ease;
+        }
+        &:hover {
+          svg {
+            transform: scale(1.2);
+          }
+        }
+        &:active {
+          svg {
+            transform: scale(0.8);
+          }
+        }
+      }
+      .servicesImg {
+        width: 210px;
+        height: auto;
+      }
+      &:nth-child(1) {
+        .servicesItemWrapper {
+          background-color: #f3f3f3;
+          h3 {
+            span {
+              background-color: #b9ff66;
+            }
+          }
+          a {
+            color: #191a23;
+            .servicesLink {
+              &::after {
+                background-color: #191a23;
+              }
+            }
+          }
+        }
+      }
+      &:nth-child(2) {
+        .servicesItemWrapper {
+          background-color: #b9ff66;
+          h3 {
+            span {
+              background-color: white;
+            }
+          }
+          a {
+            color: #191a23;
+            .servicesLink {
+              &::after {
+                background-color: #191a23;
+              }
+            }
+          }
+        }
+      }
+      &:nth-child(3) {
+        .servicesItemWrapper {
+          background-color: #191a23;
+          h3 {
+            span {
+              background-color: white;
+            }
+          }
+          a {
+            color: #fff;
+            .servicesLink {
+              &::after {
+                background-color: #fff;
+              }
+            }
+          }
+        }
+      }
+      &:nth-child(4) {
+        .servicesItemWrapper {
+          background-color: #f3f3f3;
+          h3 {
+            span {
+              background-color: #b9ff66;
+            }
+          }
+          a {
+            color: #191a23;
+            .servicesLink {
+              &::after {
+                background-color: #191a23;
+              }
+            }
+          }
+        }
+      }
+      &:nth-child(5) {
+        .servicesItemWrapper {
+          background-color: #b9ff66;
+          h3 {
+            span {
+              background-color: white;
+            }
+          }
+          a {
+            color: #191a23;
+            .servicesLink {
+              &::after {
+                background-color: #191a23;
+              }
+            }
+          }
+        }
+      }
+      &:nth-child(6) {
+        .servicesItemWrapper {
+          background-color: #191a23;
+          h3 {
+            span {
+              background-color: #b9ff66;
+            }
+          }
+          a {
+            color: #fff;
+            .servicesLink {
+              &::after {
+                background-color: #fff;
+              }
+            }
+          }
+        }
+      }
+      &:hover {
+        transform: scale(0.95);
+      }
+    }
+  }
+}
