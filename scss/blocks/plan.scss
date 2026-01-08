@@ -1,0 +1,96 @@
+.plan {
+  padding: 70px 0;
+  .about {
+    .planSubtitle {
+      width: 25%;
+    }
+  }
+  .planList {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    .planItem {
+      position: relative;
+      width: 100%;
+      padding: 0 0 4px;
+      border-radius: 45px;
+      transition: all 0.4s ease;
+      background-color: #191a23;
+      .planItemWrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border: 1px solid #191a23;
+        border-radius: 45px;
+        background-color: #f3f3f3;
+        padding: 41px 60px;
+        .planItemNumber {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          h3 {
+            font-size: 60px;
+            font-weight: 500;
+            display: flex;
+            gap: 25px;
+            align-items: center;
+            span {
+              font-size: 30px;
+              font-weight: 500;
+            }
+          }
+          .planItemBtn {
+            position: relative;
+            width: 58px;
+            height: 58px;
+            border-radius: 50%;
+            background-color: #f3f3f3;
+            border: 1px solid #191a23;
+            transition: all 0.4s ease;
+            cursor: pointer;
+            &::before {
+              content: "";
+              position: absolute;
+              width: 26px;
+              height: 6px;
+              top: 26px;
+              left: 15px;
+
+              background-color: #191a23;
+            }
+            &::after {
+              content: "";
+              position: absolute;
+              width: 6px;
+              height: 25px;
+              top: 16px;
+              left: 25px;
+              background-color: #191a23;
+            }
+          }
+        }
+        .openContent {
+          opacity: 1;
+          max-height: 9em;
+          transition: all 200ms linear;
+          will-change: opacity, max-height;
+        }
+        .hiddenContent {
+          opacity: 0;
+          max-height: 0;
+          overflow: hidden;
+          transition: opacity 200ms linear, max-height 200ms linear;
+          will-change: opacity, max-height;
+          padding: 30px 0 0 0;
+          border-top: 1px solid #191a23;
+          p {
+            font-size: 18px;
+            font-weight: 400;
+          }
+        }
+      }
+    }
+  }
+}

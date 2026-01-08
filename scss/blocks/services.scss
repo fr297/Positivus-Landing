@@ -10,7 +10,7 @@
     .servicesItem {
       position: relative;
       width: 48%;
-      padding: 0 0 5px;
+      padding: 0 0 4px;
       border-radius: 45px;
       transition: all 0.4s ease;
       background-color: #191a23;
@@ -19,7 +19,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        border: 2px solid #191a23;
+        border: 1px solid #191a23;
         border-radius: 45px;
         padding: 50px;
       }
