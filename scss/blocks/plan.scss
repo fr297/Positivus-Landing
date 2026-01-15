@@ -5,91 +5,110 @@
       width: 25%;
     }
   }
-  .planList {
-    list-style-type: none;
+  .accordion {
     display: flex;
     flex-direction: column;
     gap: 30px;
-    .planItem {
-      position: relative;
+    list-style-type: none;
+    .accordion-item {
       width: 100%;
-      padding: 0 0 4px;
-      border-radius: 45px;
-      transition: all 0.4s ease;
       background-color: #191a23;
-      .planItemWrapper {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        border: 1px solid #191a23;
-        border-radius: 45px;
+      border-radius: 45px;
+      padding-bottom: 4px;
+      transition: all 0.6s ease;
+      &:hover {
+        transform: scale(1.05);
+      }
+      .accordion-item-wrapper {
         background-color: #f3f3f3;
-        padding: 41px 60px;
-        .planItemNumber {
+        border-radius: 45px;
+        border: 1px solid #191a23;
+      }
+      .accordion-button {
+        position: relative;
+        width: 100%;
+        border: none;
+        background: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 41px 60px 41px 60px;
+        cursor: pointer;
+        .item-title {
+          font-size: 60px;
+          font-weight: 500;
           display: flex;
-          justify-content: space-between;
           align-items: center;
-          h3 {
-            font-size: 60px;
-            font-weight: 500;
-            display: flex;
-            gap: 25px;
-            align-items: center;
-            span {
-              font-size: 30px;
-              font-weight: 500;
-            }
-          }
-          .planItemBtn {
-            position: relative;
-            width: 58px;
-            height: 58px;
-            border-radius: 50%;
-            background-color: #f3f3f3;
-            border: 1px solid #191a23;
-            transition: all 0.4s ease;
-            cursor: pointer;
-            &::before {
-              content: "";
-              position: absolute;
-              width: 26px;
-              height: 6px;
-              top: 26px;
-              left: 15px;
-
-              background-color: #191a23;
-            }
-            &::after {
-              content: "";
-              position: absolute;
-              width: 6px;
-              height: 25px;
-              top: 16px;
-              left: 25px;
-              background-color: #191a23;
-            }
+          gap: 25px;
+          span {
+            font-size: 30px;
           }
         }
-        .openContent {
-          opacity: 1;
-          max-height: 9em;
-          transition: all 200ms linear;
-          will-change: opacity, max-height;
+        .icon {
+          position: absolute;
+          right: 60px;
+          width: 58px;
+          height: 58px;
+          border-radius: 50%;
+          border: 1px solid #191a23;
+          background-color: #f3f3f3;
+          &:before {
+            content: "";
+            position: absolute;
+            width: 25px;
+            height: 6px;
+            background-color: #191a23;
+            top: 25px;
+            right: 15px;
+            transition: all 0.7s ease;
+          }
+          &::after {
+            content: "";
+            position: absolute;
+            width: 6px;
+            height: 25px;
+            background-color: #191a23;
+            top: 15px;
+            right: 25px;
+            transition: all 0.7s ease;
+          }
         }
-        .hiddenContent {
-          opacity: 0;
-          max-height: 0;
-          overflow: hidden;
-          transition: opacity 200ms linear, max-height 200ms linear;
-          will-change: opacity, max-height;
-          padding: 30px 0 0 0;
+      }
+      .accordion-content {
+        width: 100%;
+        max-height: 0;
+        padding: 0 90px 0 60px;
+        opacity: 0;
+        transition: max-height 0.6s ease, opacity 0.5s ease;
+        p {
+          font-size: 18px;
+          font-weight: 400;
+          line-height: 140%;
           border-top: 1px solid #191a23;
-          p {
-            font-size: 18px;
-            font-weight: 400;
+          padding: 30px 0 41px 0;
+        }
+      }
+    }
+    .accordion-item-active {
+      .accordion-item-wrapper {
+        background-color: #b9ff66;
+      }
+      .accordion-button {
+        padding: 41px 60px 11px 60px;
+        .icon {
+          &:before {
+            transform: rotate(630deg);
+            opacity: 0;
+          }
+          &::after {
+            transform: rotate(630deg);
           }
         }
+      }
+      .accordion-content {
+        padding: 30px 60px 0 60px;
+        max-height: 300px;
+        opacity: 1;
       }
     }
   }

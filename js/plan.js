@@ -1,19 +1,10 @@
 "use strict";
 
 document.addEventListener("DOMContentLoaded", () => {
-  const btns = document.querySelectorAll(".planItemBtn"),
-    content = document.querySelector(".hiddenContent"),
-    hiddenBtn = document.querySelector(".hiddenBtn");
-
-  btns.forEach((btn) => {
-    btn.addEventListener("click", () => {
-      content.classList.add("openContent");
-      btn.classList.add("hiddenBtn");
+  document.querySelectorAll(".accordion-button").forEach((button) => {
+    button.addEventListener("click", (e) => {
+      const item = e.target.closest(".accordion-item");
+      item.classList.toggle("accordion-item-active");
     });
-  });
-
-  hiddenBtn.addEventListener("click", () => {
-    content.classList.remove("openContent");
-    btn.classList.remove("hiddenBtn");
   });
 });
