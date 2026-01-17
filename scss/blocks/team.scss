@@ -1,0 +1,92 @@
+.team {
+  padding: 70px 0 50px 0;
+  .teamList {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    list-style-type: none;
+    .teamItem {
+      width: 31%;
+      border-radius: 45px;
+      background-color: #191a23;
+      padding: 0 0 4px 0;
+      .teamItemWrapper {
+        border-radius: 45px;
+        background-color: white;
+        padding: 40px 35px;
+        border: 1px solid #191a23;
+        transition: all 0.1s ease;
+        height: 100%;
+        .person {
+          position: relative;
+          display: flex;
+          gap: 20px;
+          padding: 0 0 28px 0;
+          margin: 0 0 28px 0;
+          border-bottom: 1px solid #191a23;
+          align-items: flex-end;
+          .linkedin {
+            display: flex;
+            position: absolute;
+            right: 0;
+            top: 0;
+            border-radius: 50%;
+          }
+          img {
+            width: 105px;
+            height: 102px;
+          }
+          .personName {
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 140%;
+          }
+          p {
+            font-size: 18px;
+            font-weight: 400;
+          }
+        }
+        .personInfo {
+          font-size: 18px;
+          font-weight: 400;
+          line-height: 140%;
+        }
+      }
+      &:hover {
+        .teamItemWrapper {
+          background-color: #191a23;
+          .person {
+            color: #b9ff66;
+            border-bottom: 1px solid #b9ff66;
+            .linkedin {
+              border: 1px solid #b9ff66;
+            }
+          }
+          .personInfo {
+            color: #b9ff66;
+          }
+        }
+      }
+    }
+  }
+  .teamBtnWrapper {
+    padding: 40px 0 0 0;
+    width: 100%;
+    height: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    .teamCtaBtn {
+      padding: 20px 76px;
+      transition: all 0.2s ease-in-out;
+      top: 0;
+      &:hover {
+        background-color: #b9ff66;
+      }
+      &:active {
+        background-color: #191a23;
+      }
+    }
+  }
+}
