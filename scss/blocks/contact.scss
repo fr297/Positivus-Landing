@@ -11,7 +11,7 @@
     );
     background-repeat: no-repeat;
     background-size: contain;
-    background-position-x: 190%;
+    background-position-x: 155%;
     #form {
       position: relative;
       display: flex;
@@ -121,6 +121,22 @@
           transform: scale(0.95);
         }
       }
+    }
+  }
+}
+
+@media (max-width: 1600px) {
+  .contact {
+    .formWrapper {
+      background-position-x: 175%;
+    }
+  }
+}
+
+@media (max-width: 1440px) {
+  .contact {
+    .formWrapper {
+      background-position-x: 190%;
     }
   }
 }

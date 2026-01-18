@@ -47,8 +47,8 @@ html {
 }
 
 body {
-  font-family: "Space Grotesk", "Segoe UI", "Helvetica Neue", Helvetica,
-    sans-serif;
+  font-family:
+    "Space Grotesk", "Segoe UI", "Helvetica Neue", Helvetica, sans-serif;
 }
 
 * {
@@ -105,6 +105,33 @@ body {
     background-color: #c3c3c3;
     span::after {
       width: 0;
+    }
+  }
+}
+
+.logo {
+  display: flex;
+  gap: 12px;
+  text-decoration: none;
+  align-items: center;
+  font-size: 40px;
+  font-weight: 500;
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.navList {
+  display: flex;
+  list-style-type: none;
+  align-items: center;
+  gap: 40px;
+  li {
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 400;
+    a {
+      text-decoration: none;
     }
   }
 }
