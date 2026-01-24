@@ -136,6 +136,12 @@ body {
   }
 }
 
+@media (max-width: 900px) {
+  .container {
+    padding: 0 30px;
+  }
+}
+
 @media (max-width: 560px) {
   .container {
     width: 100%;
