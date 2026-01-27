@@ -172,3 +172,78 @@
     }
   }
 }
+
+@media (max-width: 1290px) {
+  .services {
+    .servicesList {
+      .servicesItem {
+        .servicesImg {
+          width: 150px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1155px) {
+  .services {
+    padding: 35px 0 50px 0;
+    .servicesList {
+      .servicesItem {
+        width: 60%;
+      }
+    }
+  }
+}
+
+@media (max-width: 950px) {
+  .services {
+    .servicesList {
+      .servicesItem {
+        width: 75%;
+      }
+    }
+  }
+}
+
+@media (max-width: 735px) {
+  .services {
+    .servicesList {
+      .servicesItem {
+        width: 80%;
+        h3 {
+          font-size: 25px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  .services {
+    .servicesList {
+      .servicesItem {
+        .servicesImg {
+          position: absolute;
+          bottom: 30px;
+          right: 30px;
+        }
+        a {
+          span {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .services {
+    .servicesList {
+      .servicesItem {
+        width: 100%;
+      }
+    }
+  }
+}
